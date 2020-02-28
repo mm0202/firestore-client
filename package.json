@@ -1,0 +1,32 @@
+{
+  "name": "firestore-client",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
+    "emu:start:firestore": "firebase emulators:start --only firestore",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/mm0202/firestore-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mm0202/firestore-client/issues"
+  },
+  "homepage": "https://github.com/mm0202/firestore-client#readme",
+  "dependencies": {
+    "@firebase/testing": "^0.15.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "jest": "24.9.0",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.8.2"
+  }
+}
