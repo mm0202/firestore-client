@@ -1,7 +1,7 @@
 {
   "name": "@mm0202/firestore-client",
-  "version": "0.0.1",
-  "main": "dist/index.js",
+  "version": "0.0.2",
+  "main": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
@@ -28,8 +28,5 @@
     "jest": "24.9.0",
     "ts-jest": "^24.3.0",
     "typescript": "^3.8.2"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

@@ -9,5 +9,11 @@
     "pretty": true,
     "newLine": "lf",
     "outDir": "dist"
-  }
+  },
+  "exclude": [
+    "jest.config.js",
+    "jest.setup.ts",
+    "**/*.test.ts",
+    "**/*.test.js"
+  ]
 }
