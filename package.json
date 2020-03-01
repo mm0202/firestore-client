@@ -1,12 +1,12 @@
 {
   "name": "@mm0202/firestore-client",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
     "emu:start:firestore": "firebase emulators:start --only firestore",
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "prepublishOnly": "npm run build"
   },
   "files": [
@@ -28,8 +28,5 @@
     "jest": "24.9.0",
     "ts-jest": "^24.3.0",
     "typescript": "^3.8.2"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

@@ -37,6 +37,9 @@ export default class FirestoreEmulatorClient {
     }
 
     async cleanup() {
-        return Promise.all(firebase.apps().map(app => app.delete()))
+        await Promise.all(firebase.apps().map(app => app.delete()));
+        return await firebase.clearFirestoreData({
+            projectId: this.projectId
+        });
     }
 }
