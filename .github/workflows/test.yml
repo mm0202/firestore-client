@@ -5,7 +5,7 @@ on:
     tags-ignore:
       - publish*
     branches:
-      - *
+      - '*'
 
 jobs:
   test:
