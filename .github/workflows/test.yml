@@ -31,3 +31,8 @@ jobs:
       - name: エミュレータの起動待機...
         run: sleep 5
       - run: yarn test
+      - name: notify to slack
+        uses: mm0202/action_slack-notify@master
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
