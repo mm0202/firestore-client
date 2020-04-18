@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
     "emu:start:firestore": "firebase emulators:start --only firestore",
+    "setup:emu:firestore": "firebase setup:emulators:firestore",
     "build": "rimraf dist && tsc",
     "prepublishOnly": "npm run build"
   },
