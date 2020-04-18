@@ -1,16 +1,13 @@
-name: CI
+name: test
 
 on: [push]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x, 13.x]
-
+        node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -22,7 +19,5 @@ jobs:
       - run: firebase setup:emulators:firestore
       - run: npm run emu:start:firestore &
       - name: エミュレータの起動待機...
-        run: sleep 10
+        run: sleep 5
       - run: npm test
-        env:
-          CI: true
