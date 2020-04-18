@@ -3,7 +3,7 @@ name: publish
 on:
   push:
     tags:
-      - publish.*
+      - publish*
 
 jobs:
   publish:
